@@ -165,7 +165,7 @@ Para la compresión del metodo es necesario dividirlo y analizar cada parámetro
    
 - Ejemplo:coffee:
 
-[insertTab](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
+[insertTab](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/InsertTab_example.java)
 
 ---
 
