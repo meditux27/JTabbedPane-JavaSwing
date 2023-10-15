@@ -51,9 +51,10 @@
    Debes crear una instancia de `JTabbedPane` que servirá como el contenedor de tus pestañas y su contenido.
    
    ```java
-    JFrame frame = new JFrame("Ejemplo de JTabbedPane");
+   JFrame frame = new JFrame("Ejemplo de JTabbedPane");
+   
    //Se crea la instancia JTabbedPane
-     JTabbedPane tabbedPane = new JTabbedPane();
+   JTabbedPane tabbedPane = new JTabbedPane();
    
    ```
 
