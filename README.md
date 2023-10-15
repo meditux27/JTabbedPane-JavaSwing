@@ -10,8 +10,6 @@
 
 :book:  **Las características más importantes de un `JTabbedPane` en Swing son las siguientes:**
 
-
-
 1. **Organización en pestañas**: `JTabbedPane` organiza su contenido en pestañas, lo que permite al usuario alternar fácilmente entre diferentes conjuntos de componentes o paneles.
 
 2. **Contenido personalizado**: Cada pestaña puede contener cualquier componente o panel que desees, lo que brinda flexibilidad para mostrar información, vistas o funcionalidad específica en cada pestaña.
@@ -32,13 +30,9 @@
 
 10. **Integración con otros componentes Swing**: `JTabbedPane` se integra bien con otros componentes Swing, como `JPanel`, `JLabel`, `JButton`, etc., lo que te permite construir interfaces gráficas completas y ricas en funcionalidad.
 
-
-
 ---
 
 :clipboard: **Pasos para implementar JTabbedPane**
-
-
 
 1. **Importar las clases necesarias**:
    Asegúrate de importar las clases necesarias al comienzo de tu archivo Java.  
@@ -55,10 +49,9 @@
    
    //Se crea la instancia JTabbedPane
    JTabbedPane tabbedPane = new JTabbedPane();
-   
    ```
 
-1. **Crear paneles o componentes para las pestañas**:
+3. **Crear paneles o componentes para las pestañas**:
    Crea los paneles o componentes que deseas mostrar en cada pestaña. Puedes usar `JPanel` u otros componentes según tus necesidades.
    
    ```java
@@ -69,7 +62,7 @@
    panel2.add(new JLabel("Contenido de la pestaña 2"));
    ```
 
-2. **Agregar las pestañas al `JTabbedPane`**:
+4. **Agregar las pestañas al `JTabbedPane`**:
    Para cada pestaña, utiliza el método `addTab()` del `JTabbedPane` para agregar el contenido y especificar un título para la pestaña. Esto asocia un panel o componente con una pestaña específica.
    
    ```java
@@ -77,26 +70,24 @@
    tabbedPane.addTab("Pestaña 2", panel2);
    ```
 
-3. **Agregar el `JTabbedPane` a un contenedor principal**:
+5. **Agregar el `JTabbedPane` a un contenedor principal**:
    Añade el `JTabbedPane` al contenedor principal de tu aplicación, como un `JFrame` en la mayoría de los casos.
    
    ```java
     frame.add(tabbedPane);
    ```
 
-4. **Configurar la interfaz de usuario y eventos(opcional)**:
+6. **Configurar la interfaz de usuario y eventos(opcional)**:
    Configura el `JFrame` y otros componentes según tus necesidades. Puedes agregar controladores de eventos para detectar cuando se selecciona una pestaña específica si deseas realizar acciones específicas en respuesta a la selección de una pestaña.
 
-5. **Hacer visible la ventana principal**:
+7. **Hacer visible la ventana principal**:
    Asegúrate de que la ventana principal (normalmente un `JFrame`) sea visible llamando a `setVisible(true)`.
    
    ```java
     frame.setVisible(true);
    ```
 
-
-
-:coffee: [Estructura basica](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/basic/EjemploJScrollPane.java)
+:coffee: [Estructura basica](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/TabbedPaneExample.java)
 
 ---
 
