@@ -173,40 +173,27 @@ Para la compresión del metodo es necesario dividirlo y analizar cada parámetro
 
 - Descripción
 
-Estos métodos permiten controlar, cuándo se mostrarán las barras de desplazamiento y cómo se comportarán en función de las necesidades de la aplicación.
+Este método se utiliza para eliminar una pestaña específica de un `JTabbedPane`. El parámetro `0` especifica la posición de la pestaña que deseas eliminar, y las posiciones comienzan en 0 para la primera pestaña y aumenta dependiendo de la posición a la que se desea eliminar 
 
 - Sintaxis
 
 ```java
-scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); 
-scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+ tabbedPane.removeTabAt(0);
 ```
 
 - Nota
 
-**setHorizontalScrollBarPolicy(int policy)**
+Se debe tener en cuenta su estructura basica, el cual explicara su funcionamiento
 
-Este método se utiliza para establecer la política de visualización de la barra de desplazamiento horizontal en un JScrollPane. Toma un argumento de tipo entero que especifica la política y puede ser uno de los siguientes valores:
+`void removeTabAt(int index)`
 
-- `JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento horizontal se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más ancho que el área visible en el JScrollPane.
+- `index`: Un entero que especifica la posición de la pestaña que deseas eliminar.
 
-- `JScrollPane.HORIZONTAL_SCROLLBAR_NEVER`: La barra de desplazamiento horizontal nunca se mostrará, incluso si el contenido es más ancho que el área visible. Esto puede ser útil si no deseas permitir el desplazamiento horizontal en absoluto.
-
-- `JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento horizontal se mostrará siempre, independientemente de si el contenido es más ancho que el área visible o no.
-
-**setVerticalScrollBarPolicy(int policy)**
-
-Este método es similar al anterior, pero se utiliza para establecer la política de visualización de la barra de desplazamiento vertical en el JScrollPane. También toma un argumento de tipo entero que puede ser uno de los siguientes valores:
-
-- `JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED`: La barra de desplazamiento vertical se mostrará automáticamente cuando sea necesario, es decir, cuando el contenido sea más alto que el área visible en el JScrollPane.
-
-- `JScrollPane.VERTICAL_SCROLLBAR_NEVER`: La barra de desplazamiento vertical nunca se mostrará, incluso si el contenido es más alto que el área visible.
-
-- `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS`: La barra de desplazamiento vertical se mostrará siempre, independientemente de si el contenido es más alto que el área visible o no.
+Este método permite la eliminación de pestañas de forma dinámica durante la ejecución de la aplicación, lo que puede ser útil cuando se necesita agregar o quitar pestañas en respuesta a la interacción del usuario o a cambios en el estado de la aplicación.
 
 - Ejemplo:coffee:
 
-[setHorizontalScrollBarPolicy() & setVerticalScrollBarPolicy()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneScrollbar.java)
+[removeTabAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/RemoveTabAtExample.java)
 
 ---
 
