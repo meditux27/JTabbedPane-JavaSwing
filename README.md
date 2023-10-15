@@ -91,41 +91,48 @@
 
 ---
 
-> :beginner: **setViewportView()**
+> :beginner: **addTab()**
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+ Este método se utiliza para agregar una nueva pestaña a un JTabbedPane. Esta pestaña contendrá un componente que normalmente es un panel o un contenedor
 
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+tabbedPane.addTab("Pestaña 1", panel1);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+Previamente al usuo de .addTab se debe instanciar tanto JTabbedPane como los componentes que se uniran por medio de .addTab
 
-creación de scrollpane
+//creación de JTabbedPane y componentes para adicionar
 
-`JScrollPane scrollPane = new JScrollPane();`
+`JTabbedPane tabbedPane = new JTabbedPane();`
 
-creación de textarea
+`JPanel panel1 = new JPanel();`
+` panel1.add(new JLabel("Contenido de la pestaña 1"));`
 
-`JTextArea textArea = new JTextArea(10, 20);`
+//uso de .addTab para agregar los componentes
 
-Se agrega el componente
+`tabbedPane.addTab("Pestaña 1", panel1);`
 
-`scrollPane.setViewportView(textArea);`
+Los parámetros de este método son los siguientes:
+
+- `Pestaña 1`: Es una cadena de texto que especifica el título de la nueva pestaña. Este título se mostrará en la pestaña misma para que el usuario pueda identificarla.
+
+- `panel1`: Es un objeto Component que representa el contenido que se asociará con esta pestaña.
+
+
 
 - Ejemplo:coffee:
 
-[ setViewportView]( https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[ addTab]( https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/AddTab_example.java)
 
 ---
 
-> :beginner: **getViewport()**
+> :beginner: **insertTab()**
 
 - Descripción
 
@@ -155,11 +162,11 @@ Con el contenido previamente guardado, se imprime el alto del viewport
 
 - Ejemplo:coffee:
 
-[getViewport](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
+[insertTab](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
 
 ---
 
-> :beginner: **setHorizontalScrollBarPolicy()  &  setVerticalScrollBarPolicy()**
+> :beginner: **removeTabAt()**
 
 - Descripción
 
@@ -199,3 +206,409 @@ Este método es similar al anterior, pero se utiliza para establecer la polític
 [setHorizontalScrollBarPolicy() & setVerticalScrollBarPolicy()](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneScrollbar.java)
 
 ---
+
+> :beginner: **getTabCount()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[getTabCount](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **getComponentAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[getComponentAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **getTitleAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[getTitleAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setSelectedIndex()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **getSelectedIndex()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[getSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setTabLayoutPolicy()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setTabLayoutPolicy](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setTabPlacement()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setTabPlacement](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setMnemonicAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setMnemonicAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setIconAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setIconAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setEnabledAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setEnabledAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **getToolTipTextAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[getToolTipTextAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+
+---
+
+> :beginner: **setToolTipTextAt()**
+
+- Descripción
+
+ Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+
+- Sintaxis
+
+```java
+scrollPane.setViewportView(textArea);
+```
+
+- Nota
+
+Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+
+creación de scrollpane
+
+`JScrollPane scrollPane = new JScrollPane();`
+
+creación de textarea
+
+`JTextArea textArea = new JTextArea(10, 20);`
+
+Se agrega el componente
+
+`scrollPane.setViewportView(textArea);`
+
+- Ejemplo:coffee:
+
+[setToolTipTextAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
