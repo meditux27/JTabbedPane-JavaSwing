@@ -26,18 +26,17 @@ public class RemoveTabAtExample {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					tabbedPane.removeTabAt(0);
-//nota: Elimina el elemento que esta en la posición 0, si se presiona de nuevo el botón eliminara de nuevo el nuevo elemento que se recorrio a posición 0
+//nota: Elimina el elemento que esta en la posición 0, si se presiona de nuevo el botón eliminara de nuevo el elemento que se recorrio a posición 0
 				}
 			});
 
-	        // Agregar dos pestañas
+	        
 	        
 	        tabbedPane.addTab("Pestaña 1", panel1);
 	        tabbedPane.addTab("Pestaña comodin", panelc);
 	        tabbedPane.addTab("Pestaña 2", panel2);
 	        panel2.add(btnpanel2);
-	        // Eliminar la pestaña en la posición 0 (Pestaña 1)
-	        
+	              
 
 	        frame.add(tabbedPane);
 	        frame.setLocationRelativeTo(null);
