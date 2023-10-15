@@ -128,7 +128,7 @@ Los parámetros de este método son los siguientes:
 
 - Ejemplo:coffee:
 
-[ addTab]( https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/AddTab_example.java)
+[ addTab]( https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/AddTab_example.java)
 
 ---
 
@@ -136,30 +136,33 @@ Los parámetros de este método son los siguientes:
 
 - Descripción
 
-Este método devuelve el área de visualización o "Viewport" asociada a ese JScrollPane. El Viewport es la parte del JScrollPane que muestra el contenido desplazable, como un JTextArea, una tabla o cualquier otro componente que pueda ser más grande que el área de visualización del JScrollPane.
+Este método se utiliza para insertar una nueva pestaña en una posición específica dentro de un `JTabbedPane`. A diferencia del método `addTab`, que agrega pestañas al final de la lista de pestañas, `insertTab` te permite especificar ordenadamente la posición en la que deseas insertar la pestaña.
 
 - Sintaxis
 
 ```java
-scrollPane.getViewport();
+tabbedPane.insertTab("Pestaña 2", null, panel2, "Tooltip de la Pestaña 2", 0);
 ```
 
 - Nota
 
-Para ver el funciónamiento del método, es necesario no solo recibir el parametro si no, evidenciar tanto los datos obtenidos como manipularlos 
+Para la compresión del metodo es necesario dividirlo y analizar cada parámetro 
 
-Se agrega el scollpane a un textarea previamente instanciado para el ejemplo
+`tabbedPane.insertTab("title",icon,component, "tip", index);`
 
-`JScrollPane scrollPane = new JScrollPane(textArea);`
 
-Se utiliza el metodo getViewport que permite guardar en la variable viewport su contenido 
 
-`JViewport viewport = scrollPane.getViewport();`
+1. `title`: Es una cadena de texto que especifica el título de la nueva pestaña.
 
-Con el contenido previamente guardado, se imprime el alto del viewport
+2. `icon`: Es un objeto `Icon` que representa un ícono que se mostrará en la pestaña. Puede ser `null` si no deseas mostrar un ícono.
 
-`System.out.println(viewport.getWidth());`
+3. `component`: Es un objeto `Component` que representa el contenido que se asociará con esta pestaña.
 
+4. `tip`: Es una cadena de texto que especifica el texto de información sobre herramientas (tooltip) que se mostrará cuando el usuario pase el puntero del ratón sobre la pestaña. Puede ser `null` si no deseas proporcionar un tooltip.
+
+5. `index`: Es un entero que especifica la posición en la que deseas insertar la nueva pestaña. Las posiciones se cuentan desde 0 para la primera pestaña y aumentan a medida que se agregan más pestañas.
+   
+   
 - Ejemplo:coffee:
 
 [insertTab](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/ScrollPaneViewportExample.java)
