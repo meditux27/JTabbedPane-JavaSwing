@@ -124,8 +124,6 @@ Los parámetros de este método son los siguientes:
 
 - `panel1`: Es un objeto Component que representa el contenido que se asociará con esta pestaña.
 
-
-
 - Ejemplo:coffee:
 
 [ addTab]( https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/AddTab_example.java)
@@ -150,8 +148,6 @@ Para la compresión del metodo es necesario dividirlo y analizar cada parámetro
 
 `tabbedPane.insertTab("title",icon,component, "tip", index);`
 
-
-
 1. `title`: Es una cadena de texto que especifica el título de la nueva pestaña.
 
 2. `icon`: Es un objeto `Icon` que representa un ícono que se mostrará en la pestaña. Puede ser `null` si no deseas mostrar un ícono.
@@ -161,8 +157,6 @@ Para la compresión del metodo es necesario dividirlo y analizar cada parámetro
 4. `tip`: Es una cadena de texto que especifica el texto de información sobre herramientas (tooltip) que se mostrará cuando el usuario pase el puntero del ratón sobre la pestaña. Puede ser `null` si no deseas proporcionar un tooltip.
 
 5. `index`: Es un entero que especifica la posición en la que deseas insertar la nueva pestaña. Las posiciones se cuentan desde 0 para la primera pestaña y aumentan a medida que se agregan más pestañas.
-   
-   
 - Ejemplo:coffee:
 
 [insertTab](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/InsertTab_example.java)
@@ -201,33 +195,38 @@ Este método permite la eliminación de pestañas de forma dinámica durante la 
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+Puedes utilizar este método para determinar cuántas pestañas hay en un JTabbedPane en un momento dado. Esto es útil si necesitas realizar operaciones específicas basadas en la cantidad de pestañas
 
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+int numTabs = tabbedPane.getTabCount();
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+Este método no toma ningún argumento y devuelve un valor entero que representa la cantidad de pestañas en el `JTabbedPane`.
 
-creación de scrollpane
+Para ver el funcionamiento de este metodo es necesario ingresar el resultado del metodo en una variable de tipo estero
 
-`JScrollPane scrollPane = new JScrollPane();`
+//Se crea el componente tabbedPane 
 
-creación de textarea
+`JTabbedPane tabbedPane = new JTabbedPane();`
 
-`JTextArea textArea = new JTextArea(10, 20);`
+//Se agregan los componentes previamente creados
 
-Se agrega el componente
+`JPanel panel1 = new JPanel();`
+ `panel1.add(new JLabel("Contenido de la pestaña 1"));`
 
-`scrollPane.setViewportView(textArea);`
+`tabbedPane.addTab("Pestaña 1", panel1);`
+
+//Se obtiene el numero de pestañas con el metodo 
+
+`int numTabs = tabbedPane.getTabCount();`
 
 - Ejemplo:coffee:
 
-[getTabCount](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[getTabCount](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/GetTabCount_example.java)
 
 ---
 
