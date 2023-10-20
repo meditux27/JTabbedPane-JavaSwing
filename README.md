@@ -252,8 +252,6 @@ Con lo dicho anteriormente se puede implementar el metodo
 
 Donde `index` es la posición de la pestaña cuyo componente deseas obtener. Ten en cuenta que esta posición comienza en 0 para la primera pestaña y aumenta a medida que se agregan más pestañas.
 
-
-
 [getComponentAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/GetComponentAt_example.java)
 
 ---
@@ -262,33 +260,25 @@ Donde `index` es la posición de la pestaña cuyo componente deseas obtener. Ten
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+ Este método se utiliza para obtener el título de una pestaña específica en un componente `JTabbedPane`
 
 - Sintaxis
 
 ```java
-
+String title = tabbedPane.getTitleAt(0);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+`tabbedPane.addTab("Tab 1", new JPanel());`
+`tabbedPane.addTab("Tab 2", new JPanel());`
+`tabbedPane.addTab("Tab 3", new JPanel());`
 
-creación de scrollpane
-
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+En este ejemplo, creamos un `JTabbedPane` y agregamos tres pestañas con títulos "Tab 1", "Tab 2" y "Tab 3". Luego, utilizamos `getTitleAt(0)` para obtener el título de la primera pestaña y lo mostramos en la consola.
 
 - Ejemplo:coffee:
 
-[getTitleAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[getTitleAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/GetTitleAt_example.java)
 
 ---
 
