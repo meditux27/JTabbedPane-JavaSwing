@@ -234,33 +234,27 @@ Para ver el funcionamiento de este metodo es necesario ingresar el resultado del
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+ Este método permite guardar los componentes o caractericas de una pestaña en especifico
 
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+Component componente = tabbedPane.getComponentAt(index);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+Para poder utilizar este metodo es necesario previamente realizar la creacion de las pestañas (paneles) posteriormente adicionarlas con el metodo .addTab.
 
-creación de scrollpane
+Con lo dicho anteriormente se puede implementar el metodo
 
-`JScrollPane scrollPane = new JScrollPane();`
+`Component componente = tabbedPane.getComponentAt(index);`
 
-creación de textarea
+Donde `index` es la posición de la pestaña cuyo componente deseas obtener. Ten en cuenta que esta posición comienza en 0 para la primera pestaña y aumenta a medida que se agregan más pestañas.
 
-`JTextArea textArea = new JTextArea(10, 20);`
 
-Se agrega el componente
 
-`scrollPane.setViewportView(textArea);`
-
-- Ejemplo:coffee:
-
-[getComponentAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[getComponentAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/GetComponentAt_example.java)
 
 ---
 
@@ -273,7 +267,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -307,7 +301,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -341,7 +335,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -375,7 +369,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -409,7 +403,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -443,7 +437,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -477,7 +471,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -511,7 +505,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -545,7 +539,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
@@ -579,7 +573,7 @@ Se agrega el componente
 - Sintaxis
 
 ```java
-scrollPane.setViewportView(textArea);
+
 ```
 
 - Nota
