@@ -314,27 +314,25 @@ El índex representa la posición de la pestaña que deseas seleccionar, comenza
 
 - Descripción
 
-Este método permite establecer que pestaña se presentara al  ejecutar el programa en primer lugar 
+se utiliza para obtener el índice de la pestaña actualmente seleccionada en el componente `JTabbedPane`. El índice representa la posición de la pestaña seleccionada, comenzando desde 0 para la primera pestaña, 1 para la segunda, y así sucesivamente.
 
 - Sintaxis
 
 ```java
-
+  int selectedIndex = tabbedPane.getSelectedIndex();
 ```
 
 - Nota
 
-Este método es útil cuando deseas cambiar programáticamente la pestaña activa en un `JTabbedPane`, por ejemplo, en respuesta a eventos o acciones del usuario.
+`int variable=tabbedPane.getSelectedIndex()`
 
-Por lo cual se debe tener en cuenta su estructura basica 
+Debe tener en cuenta que el resultado del metodo es un dato tipo entero, por lo cual se debe manipular teniendo en cuenta esto para representarlos al momento de imprimir o manipular.
 
-`.setSelectedIndex(int index)`
-
-El índex representa la posición de la pestaña que deseas seleccionar, comenzando desde 0 para la primera pestaña, 1 para la segunda y así sucesivamente
+Este método es útil cuando deseas conocer la pestaña que está actualmente seleccionada en un `JTabbedPane`, por ejemplo, para realizar acciones basadas en la pestaña activa en respuesta a eventos del usuario.
 
 - Ejemplo:coffee:
 
-[getSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/SetSelectedIndex_example.java)
+[getSelectedIndex](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/GetSelectedIndex_example.java)
 
 ---
 
