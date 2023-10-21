@@ -286,33 +286,27 @@ En este ejemplo, creamos un `JTabbedPane` y agregamos tres pestañas con título
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+Este método permite establecer que pestaña se presentara al ejecutar el programa en primer lugar
 
 - Sintaxis
 
 ```java
-
+tabbedPane.setSelectedIndex(1);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+Este método es útil cuando deseas cambiar programáticamente la pestaña activa en un `JTabbedPane`, por ejemplo, en respuesta a eventos o acciones del usuario.
 
-creación de scrollpane
+Por lo cual se debe tener en cuenta su estructura basica
 
-`JScrollPane scrollPane = new JScrollPane();`
+`.setSelectedIndex(int index)`
 
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+El índex representa la posición de la pestaña que deseas seleccionar, comenzando desde 0 para la primera pestaña, 1 para la segunda y así sucesivamente
 
 - Ejemplo:coffee:
 
-[setSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[setSelectedIndex]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetSelectedIndex_example.java)
 
 ---
 
@@ -320,7 +314,7 @@ Se agrega el componente
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+Este método permite establecer que pestaña se presentara al  ejecutar el programa en primer lugar 
 
 - Sintaxis
 
@@ -330,23 +324,17 @@ Se agrega el componente
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+Este método es útil cuando deseas cambiar programáticamente la pestaña activa en un `JTabbedPane`, por ejemplo, en respuesta a eventos o acciones del usuario.
 
-creación de scrollpane
+Por lo cual se debe tener en cuenta su estructura basica 
 
-`JScrollPane scrollPane = new JScrollPane();`
+`.setSelectedIndex(int index)`
 
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+El índex representa la posición de la pestaña que deseas seleccionar, comenzando desde 0 para la primera pestaña, 1 para la segunda y así sucesivamente
 
 - Ejemplo:coffee:
 
-[getSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[getSelectedIndex](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/SetSelectedIndex_example.java)
 
 ---
 
