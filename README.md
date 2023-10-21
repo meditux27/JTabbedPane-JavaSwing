@@ -306,7 +306,7 @@ El índex representa la posición de la pestaña que deseas seleccionar, comenza
 
 - Ejemplo:coffee:
 
-[setSelectedIndex]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetSelectedIndex_example.java)
+[setSelectedIndex](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetSelectedIndex_example.java)
 
 ---
 
