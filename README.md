@@ -340,33 +340,27 @@ Este método es útil cuando deseas conocer la pestaña que está actualmente se
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+e utiliza para establecer la política de diseño de las pestañas en un `JTabbedPane`. La política de diseño determina cómo se manejarán las pestañas cuando el espacio en el `JTabbedPane` es limitado.
 
 - Sintaxis
 
 ```java
-
+tabbedPane.setTabLayoutPolicy(JTabbedPane.WRAP_TAB_LAYOUT);
+tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+El parámetro `policy` es un entero que puede tomar uno de los siguientes valores:
 
-creación de scrollpane
+1. `JTabbedPane.WRAP_TAB_LAYOUT`: Este es el valor predeterminado. En este modo, las pestañas se envuelven y se muestran en varias filas si no caben en el espacio disponible. Esto permite que todas las pestañas sean visibles, pero puede hacer que el `JTabbedPane` ocupe más espacio vertical.
 
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
-
+2. `JTabbedPane.SCROLL_TAB_LAYOUT`: En este modo, se utiliza un botón de desplazamiento para permitir al usuario desplazarse a través de las pestañas si no caben en el espacio disponible. Esto ahorra espacio vertical, pero puede requerir que el usuario haga clic en el botón de desplazamiento para acceder a pestañas fuera de la vista.
 - Ejemplo:coffee:
 
-[setTabLayoutPolicy](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[WRAP_TAB_LAYOUT](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetTabLayoutPolicy_WRAP_TAB_LAYOUT_example.java)
+
+[SCROLL_TAB_LAYOUT](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetTabLayoutPolicy_SCROLL_TAB_LAYOUT_example.java)
 
 ---
 
