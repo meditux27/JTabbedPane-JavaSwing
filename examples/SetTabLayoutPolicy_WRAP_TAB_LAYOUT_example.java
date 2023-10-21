@@ -18,7 +18,7 @@ public class SetTabLayoutPolicy_WRAP_TAB_LAYOUT_example {
 	        tabbedPane.addTab("Tab 8", new JPanel());
 	        tabbedPane.addTab("Tab 9", new JPanel());
 
-	        // Cambiar la política de diseño de las pestañas a SCROLL_TAB_LAYOUT
+	        // Cambiar la política de diseño de las pestañas a WRAP_TAB_LAYOUT
 	        tabbedPane.setTabLayoutPolicy(JTabbedPane.WRAP_TAB_LAYOUT);
 
 	        frame.add(tabbedPane);
