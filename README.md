@@ -421,7 +421,7 @@ El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas as
 
 - Ejemplo:coffee:
 
-[setIconAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetIconAt_test.java)
+[setIconAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetIconAt_example.java)
 
 ---
 
