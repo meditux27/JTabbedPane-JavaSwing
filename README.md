@@ -399,71 +399,29 @@ El parámetro `tabPlacement` es un valor entero que puede tomar uno de los sigui
 
 ---
 
-> :beginner: **setMnemonicAt()**
-
-- Descripción
-
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
-
-- Sintaxis
-
-```java
-
-```
-
-- Nota
-
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
-
-creación de scrollpane
-
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
-
-- Ejemplo:coffee:
-
-[setMnemonicAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
-
----
-
 > :beginner: **setIconAt()**
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+ Este método se utiliza para establecer un ícono en una pestaña específica de un `JTabbedPane`. El ícono se mostrará junto al título de la pestaña y proporciona una representación visual adicional para la pestaña.
 
 - Sintaxis
 
 ```java
-
+ImageIcon icon = new ImageIcon("icono.png"); 
+// Reemplaza "icono.png" con la ubicación de tu ícono
+tabbedPane.setIconAt(1, icon);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+En el método `setIconAt(int tabIndex, Icon icon)`
 
-creación de scrollpane
-
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas asignar un ícono, y el segundo argumento, `icon`, es el objeto `Icon` que representa el ícono que se mostrará en esa pestaña.
 
 - Ejemplo:coffee:
 
-[setIconAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[setIconAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetIconAt_test.java)
 
 ---
 
