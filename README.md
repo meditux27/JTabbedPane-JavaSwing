@@ -491,30 +491,22 @@ Se agrega el componente
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+ Este método se utiliza para establecer un texto de información sobre herramientas (tooltip) para una pestaña específica en un `JTabbedPane`. El tooltip es el texto que se muestra cuando el usuario pasa el cursor sobre una pestaña, proporcionando información adicional sobre el contenido de la pestaña.
 
 - Sintaxis
 
 ```java
-
+  tabbedPane.setToolTipTextAt(0, "Esta es la primera pestaña");
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+`setToolTipTextAt(int tabIndex, String text)`
 
-creación de scrollpane
+El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas asignar el tooltip, y el segundo argumento, `text`, es el texto que se mostrará como tooltip cuando el cursor se coloque sobre esa pestaña.
 
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+El uso de `setToolTipTextAt()` es útil para proporcionar información adicional o descripciones breves sobre el contenido de las pestañas en tu interfaz de usuario, lo que puede ayudar a los usuarios a comprender mejor el propósito de cada pestaña.
 
 - Ejemplo:coffee:
 
-[setToolTipTextAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[setToolTipTextAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetToolTipTextAt_example.java)
