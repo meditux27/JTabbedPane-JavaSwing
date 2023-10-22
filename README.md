@@ -429,33 +429,27 @@ El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas as
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+se utiliza para habilitar o deshabilitar una pestaña específica en un `JTabbedPane`.
 
 - Sintaxis
 
 ```java
-
+ tabbedPane.setEnabledAt(1, false);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+`setEnabledAt(int tabIndex, boolean enabled)`
 
-creación de scrollpane
+Este método permite controlar la capacidad de interactuar con una pestaña, lo que puede ser útil en situaciones donde deseas habilitar o deshabilitar el acceso a ciertas partes de tu aplicación según el contexto.
 
-`JScrollPane scrollPane = new JScrollPane();`
-
-creación de textarea
-
-`JTextArea textArea = new JTextArea(10, 20);`
-
-Se agrega el componente
-
-`scrollPane.setViewportView(textArea);`
+El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas habilitar o deshabilitar, y el segundo argumento, `enabled`, es un valor booleano que determina si la pestaña estará habilitada (`true`) o deshabilitada (`false`).
 
 - Ejemplo:coffee:
 
-[setEnabledAt](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[setEnabledAt]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_example.java)
+
+[setEnabledAt_test]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_test.java)
 
 ---
 
