@@ -368,33 +368,34 @@ El parámetro `policy` es un entero que puede tomar uno de los siguientes valore
 
 - Descripción
 
- Este método permite establecer el componente de contenido que se mostrará dentro del JScrollPane. El componente view será el contenido que se envuelve y se desplazará.
+se utiliza para establecer la ubicación de las pestañas en el componente `JTabbedPane`.
 
 - Sintaxis
 
 ```java
-
+tabbedPane.setTabPlacement(JTabbedPane.LEFT);
 ```
 
 - Nota
 
-Por lo general, se pasa el componente que deseas hacer desplazable, como un JTextArea o un JPanel.
+`setTabPlacement(int tabPlacement)` 
 
-creación de scrollpane
+La ubicación de las pestañas se refiere a dónde se mostrarán las pestañas en relación con el área de contenido de `JTabbedPane`.
 
-`JScrollPane scrollPane = new JScrollPane();`
+El parámetro `tabPlacement` es un valor entero que puede tomar uno de los siguientes valores predefinidos:
 
-creación de textarea
+1. `JTabbedPane.TOP`: Este es el valor predeterminado. Coloca las pestañas en la parte superior del `JTabbedPane`, y el contenido se muestra debajo de las pestañas.
 
-`JTextArea textArea = new JTextArea(10, 20);`
+2. `JTabbedPane.BOTTOM`: Coloca las pestañas en la parte inferior del `JTabbedPane`, y el contenido se muestra arriba de las pestañas.
 
-Se agrega el componente
+3. `JTabbedPane.LEFT`: Coloca las pestañas en el lado izquierdo del `JTabbedPane`, y el contenido se muestra a la derecha de las pestañas.
 
-`scrollPane.setViewportView(textArea);`
-
+4. `JTabbedPane.RIGHT`: Coloca las pestañas en el lado derecho del `JTabbedPane`, y el contenido se muestra a la izquierda de las pestañas.
 - Ejemplo:coffee:
 
-[setTabPlacement](https://github.com/meditux27/JScrollPane-JavaSwing/blob/main/example/JScrollPaneSetViewportViewExample.java)
+[setTabPlacement](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetTabPlacement_example.java)
+
+[setTabPlacement_test](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetTabPlacement_test.java)
 
 ---
 
