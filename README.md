@@ -447,9 +447,9 @@ El primer argumento, `tabIndex`, es el índice de la pestaña a la que deseas ha
 
 - Ejemplo:coffee:
 
-[setEnabledAt]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_example.java)
+[setEnabledAt](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_example.java)
 
-[setEnabledAt_test]((https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_test.java)
+[setEnabledAt_test](https://github.com/meditux27/JTabbedPane-JavaSwing/blob/main/examples/SetEnabledAt_test.java)
 
 ---
 
