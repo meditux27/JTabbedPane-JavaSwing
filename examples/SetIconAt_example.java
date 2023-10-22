@@ -13,7 +13,7 @@ public class SetIconAt_example {
 	        tabbedPane.addTab("Tab 3", new JPanel());
 
 	        // Asignar un ícono a la segunda pestaña (índice 1)
-	        ImageIcon icon = new ImageIcon("/home/rockoland/Imágenes/iconos/linux.png"); // Reemplaza "icono.png" con la ubicación de tu ícono
+	        ImageIcon icon = new ImageIcon("/home/icon/linux.png"); // Reemplaza "icono.png" con la ubicación de tu ícono
 	        tabbedPane.setIconAt(1, icon);
 
 	        frame.add(tabbedPane);
